@@ -1,0 +1,15 @@
+{% extends 'registration/base.html' %}
+
+{% block body %}
+<div class="container">
+    {% for standard in standards %}
+   <a href="/{{standard.slug}}/"> 
+
+    <!-- <a href="{% url 'authuser:subject_list' slug=standard.slug %}"> -->
+ {{standard.name}}
+</a> <br>
+{% endfor %}
+</div>
+
+
+{% endblock body %}

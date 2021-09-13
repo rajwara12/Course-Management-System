@@ -1,0 +1,11 @@
+ 
+{% extends 'registration/base.html' %}
+
+{% block body %}
+<form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}
+
+    {{form1.as_p}}
+    {{form.as_p}}
+    <input type="submit" value="Submit">
+</form>
+{% endblock body %}

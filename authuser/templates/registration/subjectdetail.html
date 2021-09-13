@@ -1,0 +1,24 @@
+{% extends 'registration/base.html' %}
+
+{% block body %}
+<div class="container">
+    {% for lesson in  subjects.lessons.all %}
+   <a href="http://127.0.0.1:8000/{{lesson.standard.slug}}/{{subjects.slug}}/{{lesson.slug}}/"> 
+
+  <!-- <a href=" reverse ('authuser:lessondetail' slug=lesson.slug subject=subjects.slug standard=standards.slug) " > -->
+    
+    Chapter No. {{lesson.position }} {{lesson.name}}
+    
+</a>
+  <br>
+  
+{% endfor %}
+
+<a href="http://127.0.0.1:8000/{{subjects.standard.slug}}/{{subjects.slug}}/create/">
+  Create Lesson
+</a>
+
+</div>
+
+
+{% endblock body %}
